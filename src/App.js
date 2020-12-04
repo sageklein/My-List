@@ -1,10 +1,9 @@
-// import logo from "./logo.png";
 import { List } from "./List.js";
+import "./custom.scss"
 
 function App() {
 	return (
 		<div className="App">
-			{/* <img src={} className="App-logo" alt="logo" /> */}
 			<List />
 		</div>
 	);

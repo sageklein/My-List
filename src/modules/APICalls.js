@@ -1,7 +1,20 @@
+const dataURL = "https://christmaslist-a8957-default-rtdb.firebaseio.com/";
+
 export const getAll = () => {
 	return fetch(
-		"https://gist.githubusercontent.com/sageklein/4a8f7b97249113b70bcafb6e24eb3464/raw/7b25168d5aca306d46a84a1eb9c2acece2bc75ae/list.js"
-	)
-		.then((response) => response.json())
-		.then((parsedData) => parsedData.person);
+		`${dataURL}/christList.json`)
+		.then(response => response.json())
 };
+
+export const updateChristmasList = (listObj) => {
+	const updateObj = {
+		"title": listObj.title
+	}
+	return fetch(`${dataURL}/christmaslist/{listObj.fbid}`,{
+		method: "PUT",
+		headers: {
+			"Content-Type": "application.json"
+		},
+		body: JSON.stringify(updateObj)
+	})
+}
