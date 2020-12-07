@@ -3,6 +3,8 @@ const dataURL = "https://christmaslist-a8957-default-rtdb.firebaseio.com/";
 export const getAll = () => {
 	return fetch(
 		`${dataURL}/christList.json`)
+		//parses the respons and sends it back to the comonent that called for it
+		//implicit return
 		.then(response => response.json())
 };
 
