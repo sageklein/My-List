@@ -1,9 +1,9 @@
 #checklist {
   --background: #ffffff;
-  --text: #414856;
-  --check: #4F29F0;
+  --text: #505763;
+  --check: #7caafa;
   --disabled: #C3C8DE;
-  --width: 100px;
+  --width: 200px;
   --height: 140px;
   --border-radius: 10px;
   background: var(--background);
@@ -11,7 +11,7 @@
   height: var(--height);
   border-radius: var(--border-radius);
   position: relative;
-  box-shadow: 0 10px 30px rgba(#414856, 0.05);
+  box-shadow: 0 10px 30px rgba(#505763, 0.05);
   padding: 30px 45px;
   display: grid;
   grid-template-columns: 30px auto;
@@ -166,21 +166,25 @@
 @keyframes firework {
   0% {
     opacity: 1;
-    box-shadow: 0 0 0 -2px #4F29F0, 0 0 0 -2px #4F29F0, 0 0 0 -2px #4F29F0, 0 0 0 -2px #4F29F0, 0 0 0 -2px #4F29F0, 0 0 0 -2px #4F29F0;
+    box-shadow: 0 0 0 -2px #7caafa, 0 0 0 -2px #7caafa, 0 0 0 -2px #7caafa, 0 0 0 -2px #7caafa, 0 0 0 -2px #7caafa, 0 0 0 -2px #7caafa;
   }
   30% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    box-shadow: 0 -15px 0 0px #4F29F0, 14px -8px 0 0px #4F29F0, 14px 8px 0 0px #4F29F0, 0 15px 0 0px #4F29F0, -14px 8px 0 0px #4F29F0, -14px -8px 0 0px #4F29F0;
+    box-shadow: 0 -15px 0 0px #7caafa, 14px -8px 0 0px #7caafa, 14px 8px 0 0px #7caafa, 0 15px 0 0px #7caafa, -14px 8px 0 0px #7caafa, -14px -8px 0 0px #7caafa;
   }
 }
 
-
+h4 {
+  color: #7caafa;
+  size: 14px;
+  font: 400 16px 'Varela Round', sans-serif;
+}
 //--- ## BASIC #############
 body {
-  background: #E8EBF3;
+  background: #e3ecfc;
   height: 100vh;
   font: 400 16px 'Varela Round', sans-serif;
   display: flex;
