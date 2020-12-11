@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getAll } from "./modules/APICalls";
+import { getAll } from "../modules/APICalls";
 
 export const List = () => {
 	//defining variable and method to update state

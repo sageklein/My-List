@@ -1,10 +1,11 @@
+.Form
 #checklist {
   --background: #ffffff;
-  --text: #505763;
+  --text: #545961;
   --check: #7caafa;
   --disabled: #C3C8DE;
-  --width: 200px;
-  --height: 140px;
+  --width: 210px;
+  --height: 500px;
   --border-radius: 10px;
   background: var(--background);
   width: var(--width);
@@ -182,9 +183,12 @@ h4 {
   size: 14px;
   font: 400 16px 'Varela Round', sans-serif;
 }
+.nav-link{
+   align-content: right;
+}
 //--- ## BASIC #############
 body {
-  background: #e3ecfc;
+  background: #e9f1fe;
   height: 100vh;
   font: 400 16px 'Varela Round', sans-serif;
   display: flex;
