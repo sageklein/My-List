@@ -8,9 +8,9 @@ import firebase from "firebase/app";
 
 
 firebase.initializeApp(firebaseConfig);
-ReactDOM.render(
+ReactDOM.render(	
 	<React.StrictMode>
-		<App />
+			<App />
 	</React.StrictMode>,
 	document.getElementById("root")
 );

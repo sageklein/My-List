@@ -1,233 +1,354 @@
-.Form{
-  background: #ffffff;
-  color: #545961;
-  width: 600px;
-  height: 300px;
-  border-radius: 10px;
-  position: relative;
-  box-shadow: 0 10px 30px rgba(#505763, 0.05);
-  padding: 30px 45px;
-  display: grid;
-  line-height: 2.8;
+.content {
+	text-align: left;
+	margin: auto;
+	width: 350px;
+	padding: 80px;
 }
-Button{
-  background: #ffffff;
-  color: #545961;
-  width: 100px;
-  height: 40px;
-  border-radius: 10px;
+.Form {
+	background: #ffffff;
+	color: #545961;
+	width: 600px;
+	height: 300px;
+	border-radius: 10px;
+	position: relative;
+	box-shadow: 0 10px 30px rgba(#505763, 0.05);
+	padding: 30px 45px;
+	display: grid;
+	line-height: 2.8;
+}
+Button {
+	background: #ffffff;
+	color: #545961;
+	width: 100px;
+	height: 40px;
+	border-radius: 10px;
 }
 
 #checklist {
-  --background: #ffffff;
-  --text: #545961;
-  --check: #7caafa;
-  --disabled: #C3C8DE;
-  --width: 210px;
-  --height: 520px;
-  --border-radius: 10px;
-  background: var(--background);
-  width: var(--width);
-  height: var(--height);
-  border-radius: var(--border-radius);
-  position: relative;
-  box-shadow: 0 10px 30px rgba(#505763, 0.05);
-  padding: 30px 45px;
-  display: grid;
-  grid-template-columns: 30px auto;
-  align-items: center;
-  label {
-    color: var(--text);
-    position: relative;
-    cursor: pointer;
-    display: grid;
-    align-items: center;
-    width: fit-content;
-    transition: color .3s ease;
-    &::before,
-    &::after {
-      content:"";
-      position: absolute;
-    }
-    &::before {
-      height: 2px;
-      width: 8px;
-      left: -27px;
-      background: var(--check);
-      border-radius: 2px;
-      transition: background .3s ease; 
-    }
-    &:after {
-      height: 4px;
-      width: 4px;
-      top: 8px;
-      left: -25px;
-      border-radius: 50%;
-    }
-  }
-  input[type="checkbox"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    position: relative;
-    height: 15px;
-    width: 15px;
-    outline: none;
-    border: 0;
-    margin: 0 15px 0 0;
-    cursor: pointer;
-    background: var(--background);
-    display: grid;
-    align-items: center;
-    &::before,
-    &::after {
-      content:"";
-      position: absolute;
-      height: 2px;
-      top: auto;
-      background: var(--check);
-      border-radius: 2px;
-    }
-    &::before {
-      width: 0px;
-      right: 60%;
-      transform-origin: right bottom;
-    }
-    &::after {
-      width: 0px;
-      left: 40%;
-      transform-origin: left bottom;
-    }
-    &:checked {
-      &::before {
-        animation: check-01 .4s ease forwards;
-      }
-      &::after {
-        animation: check-02 .4s ease forwards;
-      }
-      + label {
-        color: var(--disabled);
-        animation: move .3s ease .1s forwards;
-        &::before {
-          background: var(--disabled);
-          animation: slice .4s ease forwards;
-        }
-        &::after {
-          animation: firework .5s ease forwards .1s;
-        }
-      }
-    }
-  }
+	--background: #ffffff;
+	--text: #545961;
+	--check: #7caafa;
+	--disabled: #c3c8de;
+	--width: 210px;
+	--height: 520px;
+	--border-radius: 10px;
+	background: var(--background);
+	width: var(--width);
+	height: var(--height);
+	border-radius: var(--border-radius);
+	position: relative;
+	box-shadow: 0 10px 30px rgba(#505763, 0.05);
+	padding: 30px 45px;
+	display: grid;
+	grid-template-columns: 30px auto;
+	align-items: center;
+	label {
+		color: var(--text);
+		position: relative;
+		cursor: pointer;
+		display: grid;
+		align-items: center;
+		width: fit-content;
+		transition: color 0.3s ease;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+		}
+		&::before {
+			height: 2px;
+			width: 8px;
+			left: -27px;
+			background: var(--check);
+			border-radius: 2px;
+			transition: background 0.3s ease;
+		}
+		&:after {
+			height: 4px;
+			width: 4px;
+			top: 8px;
+			left: -25px;
+			border-radius: 50%;
+		}
+	}
+	input[type="checkbox"] {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		position: relative;
+		height: 15px;
+		width: 15px;
+		outline: none;
+		border: 0;
+		margin: 0 15px 0 0;
+		cursor: pointer;
+		background: var(--background);
+		display: grid;
+		align-items: center;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			height: 2px;
+			top: auto;
+			background: var(--check);
+			border-radius: 2px;
+		}
+		&::before {
+			width: 0px;
+			right: 60%;
+			transform-origin: right bottom;
+		}
+		&::after {
+			width: 0px;
+			left: 40%;
+			transform-origin: left bottom;
+		}
+		&:checked {
+			&::before {
+				animation: check-01 0.4s ease forwards;
+			}
+			&::after {
+				animation: check-02 0.4s ease forwards;
+			}
+			+ label {
+				color: var(--disabled);
+				animation: move 0.3s ease 0.1s forwards;
+				&::before {
+					background: var(--disabled);
+					animation: slice 0.4s ease forwards;
+				}
+				&::after {
+					animation: firework 0.5s ease forwards 0.1s;
+				}
+			}
+		}
+	}
 }
 
 @keyframes move {
-  50% {
-    padding-left: 8px;
-    padding-right: 0px;
-  }
-  100% {
-    padding-right: 4px;
-  }
+	50% {
+		padding-left: 8px;
+		padding-right: 0px;
+	}
+	100% {
+		padding-right: 4px;
+	}
 }
 @keyframes slice {
-  60% {
-    width: 100%;
-    left: 4px;
-  }
-  100% {
-    width: 100%;
-    left: -2px;
-    padding-left: 0;
-  }
+	60% {
+		width: 100%;
+		left: 4px;
+	}
+	100% {
+		width: 100%;
+		left: -2px;
+		padding-left: 0;
+	}
 }
 @keyframes check-01 {
-  0% {
-    width: 4px;
-    top: auto;
-    transform: rotate(0);
-  }
-  50% {
-    width: 0px;
-    top: auto;
-    transform: rotate(0);
-  }
-  51% {
-    width: 0px;
-    top: 8px;
-    transform: rotate(45deg);
-  }
-  100% {
-    width: 5px;
-    top: 8px;
-    transform: rotate(45deg);
-  }
+	0% {
+		width: 4px;
+		top: auto;
+		transform: rotate(0);
+	}
+	50% {
+		width: 0px;
+		top: auto;
+		transform: rotate(0);
+	}
+	51% {
+		width: 0px;
+		top: 8px;
+		transform: rotate(45deg);
+	}
+	100% {
+		width: 5px;
+		top: 8px;
+		transform: rotate(45deg);
+	}
 }
 @keyframes check-02 {
-  0% {
-    width: 4px;
-    top: auto;
-    transform: rotate(0);
-  }
-  50% {
-    width: 0px;
-    top: auto;
-    transform: rotate(0);
-  }
-  51% {
-    width: 0px;
-    top: 8px;
-    transform: rotate(-45deg);
-  }
-  100% {
-    width: 10px;
-    top: 8px;
-    transform: rotate(-45deg);
-  }
+	0% {
+		width: 4px;
+		top: auto;
+		transform: rotate(0);
+	}
+	50% {
+		width: 0px;
+		top: auto;
+		transform: rotate(0);
+	}
+	51% {
+		width: 0px;
+		top: 8px;
+		transform: rotate(-45deg);
+	}
+	100% {
+		width: 10px;
+		top: 8px;
+		transform: rotate(-45deg);
+	}
 }
 @keyframes firework {
-  0% {
-    opacity: 1;
-    box-shadow: 0 0 0 -2px #7caafa, 0 0 0 -2px #7caafa, 0 0 0 -2px #7caafa, 0 0 0 -2px #7caafa, 0 0 0 -2px #7caafa, 0 0 0 -2px #7caafa;
-  }
-  30% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    box-shadow: 0 -15px 0 0px #7caafa, 14px -8px 0 0px #7caafa, 14px 8px 0 0px #7caafa, 0 15px 0 0px #7caafa, -14px 8px 0 0px #7caafa, -14px -8px 0 0px #7caafa;
-  }
+	0% {
+		opacity: 1;
+		box-shadow: 0 0 0 -2px #7caafa, 0 0 0 -2px #7caafa, 0 0 0 -2px #7caafa,
+			0 0 0 -2px #7caafa, 0 0 0 -2px #7caafa, 0 0 0 -2px #7caafa;
+	}
+	30% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		box-shadow: 0 -15px 0 0px #7caafa, 14px -8px 0 0px #7caafa,
+			14px 8px 0 0px #7caafa, 0 15px 0 0px #7caafa,
+			-14px 8px 0 0px #7caafa, -14px -8px 0 0px #7caafa;
+	}
 }
 
 h4 {
-  color: #7caafa;
-  size: 14px;
-  font: 400 16px 'Varela Round', sans-serif;
+	color: #7caafa;
+	size: 14px;
+	font: 400 16px "Varela Round", sans-serif;
 }
-.nav-link{
-   align-content: right;
+h1 {
+	color: white;
+	font: 500 38px "Pacifico", cursive;
+	text-shadow: 2px 2px 4px #1e468a;
+}
+
+a.nav-link {
+	align-content: right;
+	color: #7caafa;
 }
 //--- ## BASIC #############
 body {
-  background: #e9f1fe;
-  height: 100vh;
-  font: 400 16px 'Varela Round', sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  .socials {
-    position: fixed;
-    display: block;
-    left: 20px;
-    bottom: 20px;
-    > a {
-      display: block;
-      width: 30px;
-      opacity: .2;
-      transform: scale(var(--scale, .8));
-      transition: transform .3s cubic-bezier(0.38,-0.12, 0.24, 1.91);
-      &:hover {
-        --scale: 1;
-      }
-    }
-  }
+	margin: 0;
+	overflow: hidden;
+	filter: drop-shadow(0 0 10px white);
+	background: #e9f1fe;
+	height: 100vh;
+	font: 400 16px "Varela Round", sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	.socials {
+		position: fixed;
+		display: block;
+		left: 20px;
+		bottom: 20px;
+		> a {
+			display: block;
+			width: 30px;
+			opacity: 0.2;
+			transform: scale(var(--scale, 0.8));
+			transition: transform 0.3s cubic-bezier(0.38, -0.12, 0.24, 1.91);
+			&:hover {
+				--scale: 1;
+			}
+		}
+	}
+}
+
+@function random_range($min, $max) {
+	$rand: random();
+	$random_range: $min + floor($rand * (($max - $min) + 1));
+	@return $random_range;
+}
+
+.wrapper {
+	width: 100vw;
+	height: 100vh;
+	background: #e9f1fe;
+}
+$s1: "";
+$s2: "";
+$s3: "";
+@for $i from 1 through 300 {
+	$s1: $s1 +
+		random(1000) *
+		0.1vw +
+		" " +
+		random(1000) *
+		0.1vh +
+		" " +
+		0 +
+		" " +
+		random(50) *
+		-0.01rem +
+		#fff;
+	$s2: $s2 +
+		random(1000) *
+		0.1vw +
+		" " +
+		random(1000) *
+		0.1vh +
+		" " +
+		0 +
+		" " +
+		random(50) *
+		-0.01rem +
+		#fff;
+	$s3: $s3 +
+		random(1000) *
+		0.1vw +
+		" " +
+		random(1000) *
+		0.1vh +
+		" " +
+		0 +
+		" " +
+		random(50) *
+		-0.01rem +
+		#fff;
+	@if $i < 300 {
+		$s1: $s1 + ",";
+		$s2: $s2 + ",";
+		$s3: $s3 + ",";
+	}
+}
+.snow {
+	border-radius: 50%;
+	opacity: 0.8;
+	position: absolute;
+	top: -100vh;
+	animation-name: fall;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+.layer1 {
+	width: 1.5rem;
+	height: 1.5rem;
+	filter: blur(1.5px);
+	box-shadow: #{$s1};
+	animation-duration: 6s;
+}
+.layer1.a {
+	animation-delay: -3s;
+}
+.layer2 {
+	width: 1.2rem;
+	height: 1.2rem;
+	filter: blur(3px);
+	box-shadow: #{$s2};
+	animation-duration: 8s;
+}
+.layer2.a {
+	animation-delay: -4s;
+}
+.layer3 {
+	width: 0.8rem;
+	height: 0.8rem;
+	filter: blur(6px);
+	box-shadow: #{$s3};
+	animation-duration: 10s;
+}
+.layer3.a {
+	animation-delay: -5s;
+}
+@keyframes fall {
+	100% {
+		transform: translateY(200vh);
+	}
 }
