@@ -40,7 +40,6 @@ export const ChrisList = () => {
 
 	return (
 		<>
-			<h4>Nice List</h4>
 			<div id="checklist">
 				{listArray.map((item) => {
 					return (

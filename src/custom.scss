@@ -4,6 +4,9 @@
 	width: 350px;
 	padding: 80px;
 }
+.headerText {
+	flex-direction: row
+}
 .Form {
 	background: #ffffff;
 	color: #545961;
@@ -208,17 +211,18 @@ Button {
 
 h4 {
 	color: #7caafa;
-	size: 14px;
-	font: 400 16px "Varela Round", sans-serif;
+	font: 400 18px "Varela Round", sans-serif;
+	margin: 8px;
 }
 h1 {
 	color: white;
-	font: 500 38px "Pacifico", cursive;
+	font: 500 42px cursive;
 	text-shadow: 2px 2px 4px #1e468a;
+	margin: 8px;
 }
 
 a.nav-link {
-	align-content: right;
+	margin: 8px;
 	color: #7caafa;
 }
 //--- ## BASIC #############

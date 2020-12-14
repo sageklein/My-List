@@ -7,16 +7,17 @@ export const Header = () => {
 
 	return (
 		<>
-			<h2></h2>
-            
-			<a
-				aria-current="page"
-				className="nav-link"
-				style={{ cursor: "pointer" }}
-				onClick={logout}
-			>
-				Logout
-			</a>
+			<div className="headerText">
+				<h4>Nice List</h4>
+				<a
+					aria-current="page"
+					className="nav-link"
+					style={{ cursor: "pointer" }}
+					onClick={logout}
+				>
+					Logout
+				</a>
+			</div>
 		</>
 	);
 };
