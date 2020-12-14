@@ -32,9 +32,6 @@ export default function Login() {
 						placeholder="Enter email"
 						onChange={(e) => setEmail(e.target.value)}
 					/>
-					<Form.Text className="text-muted">
-						We'll never share your email with anyone else.
-					</Form.Text>
 				</Form.Group>
 
 				<Form.Group controlId="exampleForm.ControlSelect1">
@@ -49,15 +46,16 @@ export default function Login() {
 				<Button variant="primary" type="submit">
 					Submit
 				</Button>
+				<Button onClick={loginGoogle} variant="link">
+					Login with Google
+				</Button>
+
 				<em>
 					<div className="register">
 						Not registered? <Link to="register">Register</Link>
 					</div>
 				</em>
-				<Button onClick={loginGoogle}>Login with Google</Button>
 			</fieldset>
-			
 		</Form>
-		
 	);
 }

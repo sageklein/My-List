@@ -8,6 +8,7 @@ import { ChrisList } from "./journal/ChrisList";
 import { ChrisListAddForm } from "./journal/ChrisListAddForm";
 
 
+
 export default function ApplicationViews() {
   const { isLoggedIn } = useContext(FirebaseContext);
 

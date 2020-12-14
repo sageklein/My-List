@@ -1,16 +1,21 @@
+
 .content {
 	text-align: left;
 	margin: auto;
-	width: 350px;
-	padding: 80px;
+	width: 300px;
+	padding: 60px;
 }
-.headerText {
-	flex-direction: row
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	max-width: 300px;
 }
 .Form {
 	background: #ffffff;
 	color: #545961;
-	width: 600px;
+	width: 550px;
 	height: 300px;
 	border-radius: 10px;
 	position: relative;
@@ -33,7 +38,7 @@ Button {
 	--check: #7caafa;
 	--disabled: #c3c8de;
 	--width: 210px;
-	--height: 520px;
+	--height: 590px;
 	--border-radius: 10px;
 	background: var(--background);
 	width: var(--width);
@@ -210,20 +215,23 @@ Button {
 }
 
 h4 {
-	color: #7caafa;
+	color: #90adeb;
 	font: 400 18px "Varela Round", sans-serif;
 	margin: 8px;
+	max-width: auto;
 }
 h1 {
 	color: white;
-	font: 500 42px cursive;
+	font: 600 42px cursive;
 	text-shadow: 2px 2px 4px #1e468a;
 	margin: 8px;
+	min-width: 320px;
 }
 
 a.nav-link {
 	margin: 8px;
-	color: #7caafa;
+	color: #90adeb;
+	max-width: auto;
 }
 //--- ## BASIC #############
 body {

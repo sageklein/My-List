@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./App";
 import "./custom.scss";
 import { firebaseConfig } from "./components/fbAuth/fireBaseConfig";

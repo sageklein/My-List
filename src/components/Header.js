@@ -6,18 +6,16 @@ export const Header = () => {
 	const { isLoggedIn, logout } = useContext(FirebaseContext);
 
 	return (
-		<>
-			<div className="headerText">
-				<h4>Nice List</h4>
-				<a
-					aria-current="page"
-					className="nav-link"
-					style={{ cursor: "pointer" }}
-					onClick={logout}
-				>
-					Logout
-				</a>
-			</div>
-		</>
+		<div className="container">
+			<h4 className="niceList">Nice List</h4>
+			<a
+				aria-current="page"
+				className="nav-link"
+				style={{ cursor: "pointer" }}
+				onClick={logout}
+			>
+				Logout
+			</a>
+		</div>
 	);
 };
