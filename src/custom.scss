@@ -15,8 +15,8 @@
 .Form {
 	background: #ffffff;
 	color: #545961;
-	width: 550px;
-	height: 300px;
+	width: 210px;
+	height: 500px;
 	border-radius: 10px;
 	position: relative;
 	box-shadow: 0 10px 30px rgba(#505763, 0.05);
@@ -38,7 +38,7 @@ Button {
 	--check: #7caafa;
 	--disabled: #c3c8de;
 	--width: 210px;
-	--height: 590px;
+	--height: 650px;
 	--border-radius: 10px;
 	background: var(--background);
 	width: var(--width);
@@ -233,6 +233,17 @@ a.nav-link {
 	color: #90adeb;
 	max-width: auto;
 }
+
+
+
+
+
+
+
+
+
+
+
 //--- ## BASIC #############
 body {
 	margin: 0;
@@ -334,27 +345,27 @@ $s3: "";
 	height: 1.5rem;
 	filter: blur(1.5px);
 	box-shadow: #{$s1};
-	animation-duration: 6s;
+	animation-duration: 12s;
 }
 .layer1.a {
-	animation-delay: -3s;
+	animation-delay: -5s;
 }
 .layer2 {
 	width: 1.2rem;
 	height: 1.2rem;
 	filter: blur(3px);
 	box-shadow: #{$s2};
-	animation-duration: 8s;
+	animation-duration: 16s;
 }
 .layer2.a {
 	animation-delay: -4s;
 }
 .layer3 {
-	width: 0.8rem;
-	height: 0.8rem;
+	width: 0.6rem;
+	height: 0.6rem;
 	filter: blur(6px);
 	box-shadow: #{$s3};
-	animation-duration: 10s;
+	animation-duration: 20s;
 }
 .layer3.a {
 	animation-delay: -5s;
