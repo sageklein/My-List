@@ -49,7 +49,7 @@ export default function Login() {
 				<div className="or">
 					- or -
 				</div>
-				<Button onClick={loginGoogle} >
+				<Button onClick={loginGoogle} varient="Link">
 					Login with Google
 				</Button>
 

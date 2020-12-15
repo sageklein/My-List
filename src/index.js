@@ -5,7 +5,7 @@ import App from "./App"
 import "./custom.scss";
 import { firebaseConfig } from "./components/fbAuth/fireBaseConfig";
 import firebase from "firebase/app";
-import Login from "./components/fbAuth/Login";
+// import Login from "./components/fbAuth/Login";
 import { FirebaseProvider } from "./components/fbAuth/FirebaseProvider";
 
 
