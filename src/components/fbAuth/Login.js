@@ -46,6 +46,9 @@ export default function Login() {
 				<Button variant="primary" type="submit">
 					Submit
 				</Button>
+				<div className="or">
+					- or -
+				</div>
 				<Button onClick={loginGoogle} variant="link">
 					Login with Google
 				</Button>
