@@ -15,7 +15,7 @@ function App() {
 				<div className="snow layer3 a"></div>
 				<div className="snow layer3"></div>
 				<div className="content">
-					<h1>Merry Christmas</h1>
+					<h1>Meowy Christmas</h1>
 					<Router>
 						<FirebaseProvider>
 							<Header />
