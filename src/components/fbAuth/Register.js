@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Button, Form } from "react-bootstrap";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import { FirebaseContext } from "./FirebaseProvider";
 
 export default function Register() {
@@ -24,7 +24,7 @@ export default function Register() {
 
 	return (
 		<Form className="Form" onSubmit={registerClick}>
-			<fieldset>
+			<div className="fieldset">
 				<Form.Group>
 					<Form.Label>Name</Form.Label>
 					<Form.Control
@@ -59,7 +59,14 @@ export default function Register() {
 				<Button variant="primary" type="submit">
 					Register
 				</Button>
-			</fieldset>
+
+
+				<em>
+					<div className="register">
+						Already registered? <Link to="login">Login</Link>
+					</div>
+				</em>
+			</div>
 		</Form>
 	);
 }

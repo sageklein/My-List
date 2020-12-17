@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Button, Form, Row, Col } from "react-bootstrap";
 import { useHistory, Link } from "react-router-dom";
 import { FirebaseContext } from "./FirebaseProvider";
 
@@ -24,31 +24,38 @@ export default function Login() {
 
 	return (
 		<Form className="Form" onSubmit={loginSubmit}>
-			<fieldset>
-				<Form.Group controlId="formPlaintextPassword">
-					<Form.Label>Email: </Form.Label>
-					<Form.Control
-						type="email"
-						placeholder="Enter email"
-						onChange={(e) => setEmail(e.target.value)}
-					/>
+			<div className="fieldset">
+				<Form.Group as={Row} controlId="formPlaintextEmail">
+					<Form.Label column sm="2">
+						Email
+					</Form.Label>
+					<Col sm="10">
+						<Form.Control
+							plaintext
+							readOnly
+							defaultValue="email@example.com"
+							onChange={(e) => setEmail(e.target.value)}
+						/>
+					</Col>
 				</Form.Group>
 
-				<Form.Group controlId="exampleForm.ControlSelect1">
-					<Form.Label>Password: </Form.Label>
-					<Form.Control
-						type="password"
-						placeholder="Password"
-						onChange={(e) => setPassword(e.target.value)}
-					/>
+				<Form.Group as={Row} controlId="formPlaintextPassword">
+					<Form.Label column sm="2">
+						Password
+					</Form.Label>
+					<Col sm="10">
+						<Form.Control
+							type="password"
+							placeholder="Password"
+							onChange={(e) => setPassword(e.target.value)}
+						/>
+					</Col>
 				</Form.Group>
 
 				<Button variant="primary" type="submit">
 					Submit
 				</Button>
-				<div className="or">
-					- or -
-				</div>
+				<div className="or">- or -</div>
 				<Button onClick={loginGoogle} varient="Link">
 					Login with Google
 				</Button>
@@ -58,7 +65,7 @@ export default function Login() {
 						Not registered? <Link to="register">Register</Link>
 					</div>
 				</em>
-			</fieldset>
+			</div>
 		</Form>
 	);
 }

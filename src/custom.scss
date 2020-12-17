@@ -12,6 +12,7 @@
 	justify-content: space-between;
 	max-width: 300px;
 }
+
 .Form {
 	background: #ffffff;
 	color: #545961;
@@ -21,17 +22,21 @@
 	position: relative;
 	box-shadow: 0 10px 30px rgba(#505763, 0.05);
 	padding: 30px 45px;
+	padding-top: 0px;
 	display: grid;
 	line-height: 2;
 }
 Button {
-	background: #ffffff;
+	background: #f7f8fa;
 	color: #545961;
 	width: 100px;
 	height: 40px;
 	border-radius: 10px;
+	border-color: #ffffff;
 }
-
+.register{
+	padding-top: 80px;
+}
 #checklist {
 	--background: #ffffff;
 	--text: #545961;

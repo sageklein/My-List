@@ -12,7 +12,7 @@ import { FirebaseProvider } from "./components/fbAuth/FirebaseProvider";
 firebase.initializeApp(firebaseConfig);
 ReactDOM.render(
 	<React.StrictMode>
-		<Router>
+		<Router basename="/My-List">
 			<FirebaseProvider>
 				<App />
 			</FirebaseProvider>
