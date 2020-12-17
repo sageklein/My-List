@@ -13,24 +13,28 @@ export default function ApplicationViews() {
   const { isLoggedIn } = useContext(FirebaseContext);
 
   return (
-    <main>
-      <Switch>
-        <Route path="/" exact>
-          {isLoggedIn ? <ChrisList /> : <Redirect to="/login" />}
-        </Route>
+		<main>
+			<Switch>
+				<Route path={process.env.PUBLIC_URL + "/"}>
+					{isLoggedIn ? <ChrisList /> : <Redirect to="/login" />}
+				</Route>
 
-        <Route path="/add">
-          {isLoggedIn ? <ChrisListAddForm /> : <Redirect to="/login" />}
-        </Route>
+				<Route path="/add">
+					{isLoggedIn ? (
+						<ChrisListAddForm />
+					) : (
+						<Redirect to="/login" />
+					)}
+				</Route>
 
-        <Route path="/login">
-          <Login />
-        </Route>
+				<Route path="/login">
+					<Login />
+				</Route>
 
-        <Route path="/register">
-          <Register />
-        </Route>
-      </Switch>
-    </main>
+				<Route path="/register">
+					<Register />
+				</Route>
+			</Switch>
+		</main>
   );
 };
