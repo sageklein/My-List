@@ -21,7 +21,7 @@ export default function Login() {
 	const loginGoogle = () => {
 		signInWithGoogle().then((response) => history.push("/"));
 	};
-
+	console.log("hello")
 	return (
 		<Form className="Form" onSubmit={loginSubmit}>
 			<div className="fieldset">

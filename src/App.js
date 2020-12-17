@@ -8,14 +8,17 @@ function App() {
 	return (
 		<>
 			<div className="wrapper">
+				<div className="snow layer4 a"></div>
+				<div className="snow layer4"></div>
 				<div className="snow layer1 a"></div>
 				<div className="snow layer1"></div>
 				<div className="snow layer2 a"></div>
 				<div className="snow layer2"></div>
 				<div className="snow layer3 a"></div>
 				<div className="snow layer3"></div>
+
 				<div className="content">
-					<h1>Meowy Christmas</h1>
+					<h1>Meowy  MEOWY Christmas</h1>
 					<Router>
 						<FirebaseProvider>
 							<Header />

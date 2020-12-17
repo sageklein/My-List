@@ -15,7 +15,7 @@ export default function ApplicationViews() {
   return (
 		<main>
 			<Switch>
-				<Route path={process.env.PUBLIC_URL + "/"}>
+				<Route exact path="/">
 					{isLoggedIn ? <ChrisList /> : <Redirect to="/login" />}
 				</Route>
 
