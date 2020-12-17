@@ -3,7 +3,6 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import { FirebaseContext } from "./fbAuth/FirebaseProvider";
 import Login from "./fbAuth/Login";
 import Register from "./fbAuth/Register";
-import BASE from "../../src/env";
 // import ChrisListAddForm from "./ChrisListAddForm";
 import { ChrisList } from "./journal/ChrisList";
 import { ChrisListAddForm } from "./journal/ChrisListAddForm";
@@ -16,15 +15,11 @@ export default function ApplicationViews() {
   return (
 		<main>
 			<Switch>
-				<Route exact path={`${BASE}/`}>
-					{isLoggedIn ? (
-						<ChrisList />
-					) : (
-						<Redirect to={`${BASE}/login`} />
-					)}
+				<Route exact path="/">
+					{isLoggedIn ? <ChrisList /> : <Redirect to="/login" />}
 				</Route>
 
-				<Route path={`${BASE}/add`}>
+				<Route path="/add">
 					{isLoggedIn ? (
 						<ChrisListAddForm />
 					) : (
@@ -32,11 +27,11 @@ export default function ApplicationViews() {
 					)}
 				</Route>
 
-				<Route path={`${BASE}/login`}>
+				<Route path="/login">
 					<Login />
 				</Route>
 
-				<Route path={`${BASE}/register`}>
+				<Route path="/register">
 					<Register />
 				</Route>
 			</Switch>
